@@ -12,9 +12,7 @@ function saveTime(time) {
 
 function restoreTime() {
     const currentTime = localStorage.getItem(LOCALSTORAGE_KEY);
-    if (currentTime !== null) {
-        player.setCurrentTime(parseFloat(currentTime));
-    }
+    player.setCurrentTime(currentTime);
 }
 
 player.on('timeupdate', throttle(data => {
